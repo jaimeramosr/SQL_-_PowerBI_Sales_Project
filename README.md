@@ -20,7 +20,9 @@ The data was then imported into **MySQL**, ensuring the correct formats were app
 
 <i>2. Data Cleaning</i> <br>
 All cleaning steps were performed using SQL. The full script is available in the project files.
+
 **Steps included:**
+
 1. **Removing duplicates**
 - No duplicates were found. If needed:
 ```sql
