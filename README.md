@@ -16,10 +16,10 @@
   <img src="Images/Import_window.png" alt="SQL Import Window" width="400">
 
 ---
-	## 2. _Data Cleaning_
-	All cleaning steps were performed using SQL. The full script is available in the project files.
-	**Steps included:**
-	1. **Removing duplicates**
+## 2. _Data Cleaning_
+All cleaning steps were performed using SQL. The full script is available in the project files.
+**Steps included:**
+1. **Removing duplicates**
 	- No duplicates were found. If needed:
      ```sql
      DELETE FROM sales_data2_copy WHERE row_num > 1;
