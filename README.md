@@ -67,7 +67,7 @@ As seen in the script, The analysis focuses on 4 aspects:
 ---
 <h2>Power BI Dashboard Development</h2>
 <i>1. Importing Cleaned Data </i> <br>
-Cleaned data was imported into Power BI as .csv or directly from the MySQL database. <br>
+Cleaned data was imported into Power BI as .csv or directly from the MySQL database.
 <i>2. data Transformation with DAX </i> <br>
 New measures created: **Total Revenue, Total Profit, Total Discounts Given, and Average Order Revenue**.
 <p>
