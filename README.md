@@ -3,17 +3,19 @@
 <h1>📊 Executive Sales Dashboard with SQL & Power BI </h1>
 <p>
 	This project focuses on preparing, cleaning, and analyzing sales data using SQL and building a real-time, executive-oriented dashboard using Microsoft Power BI.
-    <blockquote>
-        <img src="Images/Sales_Dashboard.PNG" alt="Sales Dashboard">
-    </blockquote>
+    <p align="center">
+  <img src="Images/Sales_Dashboard.PNG" alt="Sales Dashboard" width="700">
+</p>
 <h2>🛠️ Data preparation with SQL</h2>
 	<i>1. Importing data </i> <br>
 	- The original dataset was reviewed in Excel to understand its structure, identify irrelevant columns, and check for data types.
 	- The data was then imported into **MySQL**, ensuring the correct formats were applied—especially for dates (e.g., `%m/%d/%Y`).
 
-	<blockquote>
-        <img src="Imágenes/Import_window.PNG" alt="">
-    </blockquote>
+	<p align="center">
+  <img src="Imágenes/Import_window.PNG" alt="SQL Import Window" width="600">
+</p>
+
+---
 	
 	<i>2. Data cleaning </i> <br>
 	All cleaning steps were performed using SQL. The full script is available in the project files.
