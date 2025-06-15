@@ -77,9 +77,12 @@ Additional columns: <strong>Month Name, Month Number, Day Name, Day Number</stro
 </p>
 <i>3. Dashboard Design </i> <br>
 Design principles:
+
 - Focused on executive-level KPIs.
 - Key metrics displayed using value cards: Total Revenue, Total Profit, Total Orders, etc.
+
 Visuals include:
+
 - Bar charts (e.g., daily revenue, revenue by category)
 - Line charts (e.g., monthly trends)	
 - Map charts and scatter plots
