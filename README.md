@@ -60,34 +60,32 @@ As seen in the script, The analysis focuses on 4 aspects:
 - Top 5 best-selling products.
 - Top 5 representatives.
 - Best-performing store locations from the last stored week.
-<img src="Imágenes/SQL_Analysis_Results.png" alt="SQL Analysis Results" width="700">
+<img src="Images/SQL_Analysis_Results.png" alt="SQL Analysis Results" width="700">
 ---
 <h2>Power BI Dashboard Development</h2>
-	<i>1. Importing Cleaned Data </i> <br>
-	Cleaned data was imported into Power BI as .csv or directly from the MySQL database. 
-	<i>2. data Transformation with DAX </i> <br>
-	New measures created:
-Total Revenue, Total Profit, Total Discounts Given, and Average Order Revenue.
-
-	Additional columns:
-Month Name, Month Number, Day Name, Day Number — useful for chronological charts and trend lines.
-	<i>3. Dashboard Design </i> <br>
-	Design principles:
-	- Focused on executive-level KPIs.
-	- Key metrics displayed using value cards: Total Revenue, Total Profit, Total Orders, etc.
-
+<i>1. Importing Cleaned Data </i> <br>
+Cleaned data was imported into Power BI as .csv or directly from the MySQL database. 
+<i>2. data Transformation with DAX </i> <br>
+New measures created: **Total Revenue, Total Profit, Total Discounts Given, and Average Order Revenue**.
+<p>
+Additional columns: **Month Name, Month Number, Day Name, Day Number** — useful for chronological charts and trend lines.
+</p>
+<i>3. Dashboard Design </i> <br>
+Design principles:
+- Focused on executive-level KPIs.
+- Key metrics displayed using value cards: Total Revenue, Total Profit, Total Orders, etc.
 Visuals include:
-	- Bar charts (e.g., daily revenue, revenue by category)
-	- Line charts (e.g., monthly trends)	
-	- Map charts and scatter plots
-	- Filters for dynamic analysis (e.g., by country or store)
-    <blockquote>       
-        <img src="Images/Sales_Dashboard.PNG" alt="">
-    </blockquote>
-	<i>4. Insights  Findings </i> <br>
-	Some key observations:
-	- December shows the highest revenue—likely due to holiday shopping.
-	- Tuesdays and Fridays have the lowest sales—could inform operational decisions like store maintenance or training days.
-	- There is a linear relationship between profit and discounts, which could be further explored using Python or advanced analytics tools.
-	- Payment methods are evenly distributed.
+- Bar charts (e.g., daily revenue, revenue by category)
+- Line charts (e.g., monthly trends)	
+- Map charts and scatter plots
+- Filters for dynamic analysis (e.g., by country or store)
+<p align="center">
+<img src="Images/Sales_Dashboard.png" alt="Sales Dashboard" width="700">
+</p>
+<i>4. Insights  Findings </i> <br>
+Some key observations:
+- December shows the highest revenue—likely due to holiday shopping.
+- Tuesdays and Fridays have the lowest sales—could inform operational decisions like store maintenance or training days.
+- There is a linear relationship between profit and discounts, which could be further explored using Python or advanced analytics tools.
+- Payment methods are evenly distributed.
 Further insights can be uncovered using Power BI filters to segment by country, store, or product category.
