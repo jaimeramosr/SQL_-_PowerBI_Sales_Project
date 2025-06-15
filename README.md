@@ -8,7 +8,7 @@
 </p>
 ---
 <h2>🛠️ Data preparation with SQL</h2>
-	<i>1. Importing data </i> <br>
+<i>1. Importing data </i> <br>
 	The original dataset was reviewed in Excel to understand its structure, identify irrelevant columns, and check for data types.
 	<p>
 	The data was then imported into **MySQL**, ensuring the correct formats were applied—especially for dates (e.g., `%m/%d/%Y`).
@@ -16,27 +16,27 @@
   <img src="Images/Import_window.png" alt="SQL Import Window" width="400">
 
 ---
-## 2. _Data Cleaning_
+<i>2. Data Cleaning</i>
 All cleaning steps were performed using SQL. The full script is available in the project files.
 **Steps included:**
 1. **Removing duplicates**
-	- No duplicates were found. If needed:
-     ```sql
-     DELETE FROM sales_data2_copy WHERE row_num > 1;
-     ```
-	2. **Standardizing data**
-	- No spelling issues, extra spaces, symbols, etc. If any, we could proceed as follows:
-	- Spaces before words  SET Country = TRIM(Country);
-	- Similar words  SET Country = ‘Canada' WHERE Country LIKE ‘Canad';
-	- Symbols or dots at the end  TRIM(TRAILING '.' FROM Country) WHERE Country LIKE 'Canada%';
-	3. **Handling Null or missing values**
-	- No nulls were found. If present, they would be handled via imputation or row removal depending on context, such as adding the price of a piece of equipment with the same price of that equipment in that same store, a price with the average value of its prices in other stores, the category of a piece of equipment with the category of a similar piece of equipment, etc.
-	4. **Removing rellevant Columns/Rows**
-	  - Example:
-     ```sql
-     ALTER TABLE sales_data2 DROP COLUMN row_num;
-     DELETE FROM sales_data2 WHERE product IS NULL;
-     ```
+- No duplicates were found. If needed:
+```sql
+DELETE FROM sales_data2_copy WHERE row_num > 1;
+```
+2. **Standardizing data**
+- No spelling issues, extra spaces, symbols, etc. If any, we could proceed as follows:
+- Spaces before words  SET Country = TRIM(Country);
+- Similar words  SET Country = ‘Canada' WHERE Country LIKE ‘Canad';
+- Symbols or dots at the end  TRIM(TRAILING '.' FROM Country) WHERE Country LIKE 'Canada%';
+3. **Handling Null or missing values**
+- No nulls were found. If present, they would be handled via imputation or row removal depending on context, such as adding the price of a piece of equipment with the same price of that equipment in that same store, a price with the average value of its prices in other stores, the category of a piece of equipment with the category of a similar piece of equipment, etc.
+4. **Removing rellevant Columns/Rows**
+- Example:
+```sql
+ALTER TABLE sales_data2 DROP COLUMN row_num;
+DELETE FROM sales_data2 WHERE product IS NULL;
+```
 
 	<i>3. Analyzing data </i> <br>
 	Before moving to Power BI, we ran exploratory analysis via SQL. The script calculates key metrics like **Total Revenue** and **Profit**:
