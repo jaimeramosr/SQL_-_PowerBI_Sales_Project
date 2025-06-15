@@ -26,36 +26,43 @@ DELETE FROM sales_data2_copy WHERE row_num > 1;
 ```
 2. **Standardizing data**
 - No spelling issues, extra spaces, symbols, etc. If any, we could proceed as follows:
-- Spaces before words  SET Country = TRIM(Country);
-- Similar words  SET Country = ‘Canada' WHERE Country LIKE ‘Canad';
-- Symbols or dots at the end  TRIM(TRAILING '.' FROM Country) WHERE Country LIKE 'Canada%';
+- Spaces before words:
+```sql
+SET Country = TRIM(Country);
+```
+- Similar words:
+```sql
+SET Country = ‘Canada' WHERE Country LIKE ‘Canad';
+```
+- Symbols or dots at the end:
+```sql
+TRIM(TRAILING '.' FROM Country) WHERE Country LIKE 'Canada%';
+```
 3. **Handling Null or missing values**
-- No nulls were found. If present, they would be handled via imputation or row removal depending on context, such as adding the price of a piece of equipment with the same price of that equipment in that same store, a price with the average value of its prices in other stores, the category of a piece of equipment with the category of a similar piece of equipment, etc.
+- No null values were found in the dataset. If any had been present, they would have been addressed using context-appropriate methods such as imputation or row removal. For example, missing product prices could be filled using the average price of the same item in the same store, or across other stores. Similarly, missing categories could be inferred based on similar products.
 4. **Removing rellevant Columns/Rows**
 - Example:
 ```sql
 ALTER TABLE sales_data2 DROP COLUMN row_num;
 DELETE FROM sales_data2 WHERE product IS NULL;
 ```
-
-	<i>3. Analyzing data </i> <br>
-	Before moving to Power BI, we ran exploratory analysis via SQL. The script calculates key metrics like **Total Revenue** and **Profit**:
-
+<i>3. Analyzing data </i> <br>
+Before moving to Power BI, we ran exploratory analysis via SQL. The script calculates key metrics like **Total Revenue** and **Profit**:
 ```sql
 ALTER TABLE sales_data2 ADD COLUMN Total_Revenue DOUBLE;
 UPDATE sales_data2 SET Total_Revenue = (Price_Per_Unit * Quantity_Purchased) - Discount_Applied;
 
 ALTER TABLE sales_data2 ADD COLUMN Profit DOUBLE;
 UPDATE sales_data2 SET Profit = Total_Revenue - (Cost_Price * Quantity_Purchased);
-	
-	As seen in the script, The analysis focuses on 4 aspects:
-	- Total revenue & profit by country.
-	- Top 5 best-selling products.
-	- Top 5 representatives.
-	- Best-performing store locations from the last stored week.
-	<blockquote>
-        <img src="Imágenes/SQL_Analysis_Results.PNG" alt="">
-    </blockquote>
+```
+As seen in the script, The analysis focuses on 4 aspects:
+- Total revenue & profit by country.
+- Top 5 best-selling products.
+- Top 5 representatives.
+- Best-performing store locations from the last stored week.
+<blockquote>
+<img src="Imágenes/SQL_Analysis_Results.PNG" alt="">
+</blockquote>
 ---
 <h2>Power BI Dashboard Development</h2>
 	<i>1. Importing Cleaned Data </i> <br>
