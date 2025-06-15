@@ -4,16 +4,14 @@
 <p>
 	This project focuses on preparing, cleaning, and analyzing sales data using SQL and building a real-time, executive-oriented dashboard using Microsoft Power BI.
     <p align="center">
-  <img src="Images/Sales_Dashboard.PNG" alt="Sales Dashboard" width="700">
+  <img src="Images/Sales_Dashboard.png" alt="Sales Dashboard" width="700">
 </p>
 <h2>🛠️ Data preparation with SQL</h2>
 	<i>1. Importing data </i> <br>
 	- The original dataset was reviewed in Excel to understand its structure, identify irrelevant columns, and check for data types.
 	- The data was then imported into **MySQL**, ensuring the correct formats were applied—especially for dates (e.g., `%m/%d/%Y`).
 
-	<p align="center">
-  <img src="Imágenes/Import_window.PNG" alt="SQL Import Window" width="600">
-</p>
+  <img src="Images/Import_window.png" alt="SQL Import Window" width="600">
 
 ---
 	
