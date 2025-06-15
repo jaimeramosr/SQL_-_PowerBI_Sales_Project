@@ -9,12 +9,13 @@
 ---
 <h2>🛠️ Data preparation with SQL</h2>
 <i>1. Importing data </i> <br>
-	The original dataset was reviewed in Excel to understand its structure, identify irrelevant columns, and check for data types.
-	<p>
-	The data was then imported into **MySQL**, ensuring the correct formats were applied—especially for dates (e.g., `%m/%d/%Y`).
-	</p>
-  <img src="Images/Import_window.png" alt="SQL Import Window" width="400">
-
+The original dataset was reviewed in Excel to understand its structure, identify irrelevant columns, and check for data types.
+<p>
+The data was then imported into **MySQL**, ensuring the correct formats were applied—especially for dates (e.g., `%m/%d/%Y`).
+</p>
+<p align="center">
+<img src="Images/Import_window.png" alt="SQL Import Window" width="400">
+</p>
 ---
 <i>2. Data Cleaning</i> <br>
 All cleaning steps were performed using SQL. The full script is available in the project files.
@@ -60,11 +61,13 @@ As seen in the script, The analysis focuses on 4 aspects:
 - Top 5 best-selling products.
 - Top 5 representatives.
 - Best-performing store locations from the last stored week.
+<p align="center">
 <img src="Images/SQL_Analysis_Results.png" alt="SQL Analysis Results" width="700">
+</p>
 ---
 <h2>Power BI Dashboard Development</h2>
 <i>1. Importing Cleaned Data </i> <br>
-Cleaned data was imported into Power BI as .csv or directly from the MySQL database. 
+Cleaned data was imported into Power BI as .csv or directly from the MySQL database. <br>
 <i>2. data Transformation with DAX </i> <br>
 New measures created: **Total Revenue, Total Profit, Total Discounts Given, and Average Order Revenue**.
 <p>
