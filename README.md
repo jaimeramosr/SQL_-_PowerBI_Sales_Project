@@ -16,7 +16,7 @@
   <img src="Images/Import_window.png" alt="SQL Import Window" width="400">
 
 ---
-<i>2. Data Cleaning</i>
+<i>2. Data Cleaning</i> <br>
 All cleaning steps were performed using SQL. The full script is available in the project files.
 **Steps included:**
 1. **Removing duplicates**
@@ -60,9 +60,7 @@ As seen in the script, The analysis focuses on 4 aspects:
 - Top 5 best-selling products.
 - Top 5 representatives.
 - Best-performing store locations from the last stored week.
-<blockquote>
-<img src="Imágenes/SQL_Analysis_Results.PNG" alt="">
-</blockquote>
+<img src="Imágenes/SQL_Analysis_Results.png" alt="SQL Analysis Results" width="700">
 ---
 <h2>Power BI Dashboard Development</h2>
 	<i>1. Importing Cleaned Data </i> <br>
