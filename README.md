@@ -13,9 +13,8 @@ The original dataset was reviewed in Excel to understand its structure, identify
 <p>
 The data was then imported into **MySQL**, ensuring the correct formats were applied—especially for dates (e.g., `%m/%d/%Y`).
 </p>
-<p align="center">
 <img src="Images/Import_window.png" alt="SQL Import Window" width="400">
-</p>
+
 ---
 <i>2. Data Cleaning</i> <br>
 All cleaning steps were performed using SQL. The full script is available in the project files.
