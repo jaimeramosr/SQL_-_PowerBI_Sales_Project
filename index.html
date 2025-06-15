@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL & Power BI Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    .center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<h1>📊 Executive Sales Dashboard with SQL & Power BI</h1>
+
+<p>This project focuses on preparing, cleaning, and analyzing sales data using SQL and building a real-time, executive-oriented dashboard using Microsoft Power BI.</p>
+
+<div class="center">
+  <img src="Images/Sales_Dashboard.png" alt="Sales Dashboard" width="700">
+</div>
+
+<hr>
+
+<h2>🛠️ Data Preparation with SQL</h2>
+
+<h3>1. Importing data</h3>
+<p>The original dataset was reviewed in Excel to understand its structure, identify irrelevant columns, and check for data types.</p>
+<p>The data was then imported into <strong>MySQL</strong>, ensuring the correct formats were applied—especially for dates (e.g., <code>%m/%d/%Y</code>).</p>
+
+<div class="center">
+  <img src="Images/Import_window.png" alt="SQL Import Window" width="250">
+</div>
+
+<h3>2. Data Cleaning</h3>
+
+<p>All cleaning steps were performed using SQL. The full script is available in the project files.</p>
+
+<strong>Steps included:</strong>
+
+<ol>
+  <li><strong>Removing duplicates</strong>
+    <p>No duplicates were found. If needed:</p>
+    <pre><code>DELETE FROM sales_data2_copy WHERE row_num > 1;</code></pre>
+  </li>
+
+  <li><strong>Standardizing data</strong>
+    <ul>
+      <li>Spaces before words:</li>
+      <pre><code>SET Country = TRIM(Country);</code></pre>
+      <li>Similar words:</li>
+      <pre><code>SET Country = 'Canada' WHERE Country LIKE 'Canad';</code></pre>
+      <li>Symbols or dots at the end:</li>
+      <pre><code>TRIM(TRAILING '.' FROM Country) WHERE Country LIKE 'Canada%';</code></pre>
+    </ul>
+  </li>
+
+  <li><strong>Handling null or missing values</strong>
+    <p>No null values were found in the dataset. If any had been present, they would have been addressed using context-appropriate methods such as imputation or row removal. For example, missing product prices could be filled using the average price of the same item in the same store, or across other stores. Similarly, missing categories could be inferred based on similar products.</p>
+  </li>
+
+  <li><strong>Removing irrelevant columns/rows</strong>
+    <pre><code>
+ALTER TABLE sales_data2 DROP COLUMN row_num;
+DELETE FROM sales_data2 WHERE product IS NULL;
+    </code></pre>
+  </li>
+</ol>
+
+<h3>3. Analyzing Data</h3>
+<p>Before moving to Power BI, we ran exploratory analysis via SQL. The script calculates key metrics like <strong>Total Revenue</strong> and <strong>Profit</strong>:</p>
+
+<pre><code>
+ALTER TABLE sales_data2 ADD COLUMN Total_Revenue DOUBLE;
+UPDATE sales_data2 SET Total_Revenue = (Price_Per_Unit * Quantity_Purchased) - Discount_Applied;
+
+ALTER TABLE sales_data2 ADD COLUMN Profit DOUBLE;
+UPDATE sales_data2 SET Profit = Total_Revenue - (Cost_Price * Quantity_Purchased);
+</code></pre>
+
+<p>The analysis focused on:</p>
+<ul>
+  <li>Total revenue & profit by country.</li>
+  <li>Top 5 best-selling products.</li>
+  <li>Top 5 representatives.</li>
+  <li>Best-performing store locations from the last stored week.</li>
+</ul>
+
+<div class="center">
+  <img src="Images/SQL_Analysis_Results.png" alt="SQL Analysis Results" width="700">
+</div>
+
+<hr>
+
+<h2>📈 Power BI Dashboard Development</h2>
+
+<h3>1. Importing Cleaned Data</h3>
+<p>Cleaned data was imported into Power BI as .csv or directly from the MySQL database.</p>
+
+<h3>2. Data Transformation with DAX</h3>
+<p>New measures created: <strong>Total Revenue, Total Profit, Total Discounts Given, and Average Order Revenue</strong>.</p>
+<p>Additional columns: <strong>Month Name, Month Number, Day Name, Day Number</strong> — useful for chronological charts and trend lines.</p>
+
+<h3>3. Dashboard Design</h3>
+<p>Design principles:</p>
+<ul>
+  <li>Focused on executive-level KPIs.</li>
+  <li>Key metrics displayed using value cards: Total Revenue, Total Profit, Total Orders, etc.</li>
+</ul>
+
+<p>Visuals include:</p>
+<ul>
+  <li>Bar charts (e.g., daily revenue, revenue by category)</li>
+  <li>Line charts (e.g., monthly trends)</li>
+  <li>Map charts and scatter plots</li>
+  <li>Filters for dynamic analysis (e.g., by country or store)</li>
+</ul>
+
+<div class="center">
+  <img src="Images/Sales_Dashboard.png" alt="Sales Dashboard" width="700">
+</div>
+
+<h3>4. Insights & Findings</h3>
+<ul>
+  <li>December shows the highest revenue—likely due to holiday shopping.</li>
+  <li>Tuesdays and Fridays have the lowest sales—could inform operational decisions like store maintenance or training days.</li>
+  <li>There is a linear relationship between profit and discounts, which could be further explored using Python or advanced analytics tools.</li>
+  <li>Payment methods are evenly distributed.</li>
+</ul>
+
+<p>Further insights can be uncovered using Power BI filters to segment by country, store, or product category.</p>
+
+</body>
+</html>

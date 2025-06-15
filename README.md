@@ -18,7 +18,7 @@ The data was then imported into **MySQL**, ensuring the correct formats were app
 <img src="Images/Import_window.png" alt="SQL Import Window" width="250">
 </p>
 
-## 2. Data Cleaning
+<i>2. Data Cleaning</i> <br>
 
 All cleaning steps were performed using SQL. The full script is available in the project files.
 
