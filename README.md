@@ -16,7 +16,7 @@
   <img src="Images/Import_window.png" alt="SQL Import Window" width="400">
 
 ---
-	*2. Data cleaning*
+	## 2. _Data Cleaning_
 	All cleaning steps were performed using SQL. The full script is available in the project files.
 	**Steps included:**
 	1. **Removing duplicates**
