@@ -90,10 +90,13 @@ Visuals include:
 <p align="center">
 <img src="Images/Sales_Dashboard.png" alt="Sales Dashboard" width="700">
 </p>
+
 <i>4. Insights  Findings </i> <br>
 Some key observations:
+
 - December shows the highest revenue—likely due to holiday shopping.
 - Tuesdays and Fridays have the lowest sales—could inform operational decisions like store maintenance or training days.
 - There is a linear relationship between profit and discounts, which could be further explored using Python or advanced analytics tools.
 - Payment methods are evenly distributed.
+
 Further insights can be uncovered using Power BI filters to segment by country, store, or product category.
