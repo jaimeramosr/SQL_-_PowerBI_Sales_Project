@@ -61,12 +61,17 @@ As seen in the script, The analysis focuses on 4 aspects:
 - Top 5 representatives.
 - Best-performing store locations from the last stored week.
 <img src="Images/SQL_Analysis_Results.png" alt="SQL Analysis Results" width="700">
+
 ---
 <h2>Power BI Dashboard Development</h2>
 <i>1. Importing Cleaned Data </i> <br>
+<p>
 Cleaned data was imported into Power BI as .csv or directly from the MySQL database. 
+</p>
 <i>2. data Transformation with DAX </i> <br>
+<p>
 New measures created: **Total Revenue, Total Profit, Total Discounts Given, and Average Order Revenue**.
+</p>
 <p>
 Additional columns: **Month Name, Month Number, Day Name, Day Number** — useful for chronological charts and trend lines.
 </p>
