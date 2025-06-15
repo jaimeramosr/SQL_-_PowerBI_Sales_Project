@@ -70,10 +70,10 @@ Cleaned data was imported into Power BI as .csv or directly from the MySQL datab
 </p>
 <i>2. data Transformation with DAX </i> <br>
 <p>
-New measures created: **Total Revenue, Total Profit, Total Discounts Given, and Average Order Revenue**.
+New measures created:<strong>Total Revenue, Total Profit, Total Discounts Given, and Average Order Revenue</strong>.
 </p>
 <p>
-Additional columns: **Month Name, Month Number, Day Name, Day Number** — useful for chronological charts and trend lines.
+Additional columns: <strong>Month Name, Month Number, Day Name, Day Number</strong> — useful for chronological charts and trend lines.
 </p>
 <i>3. Dashboard Design </i> <br>
 Design principles:
