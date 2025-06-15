@@ -6,6 +6,7 @@
     <p align="center">
   <img src="Images/Sales_Dashboard.png" alt="Sales Dashboard" width="700">
 </p>
+
 ---
 <h2>🛠️ Data preparation with SQL</h2>
 <i>1. Importing data </i> <br>
@@ -15,7 +16,7 @@ The data was then imported into **MySQL**, ensuring the correct formats were app
 </p>
 <img src="Images/Import_window.png" alt="SQL Import Window" width="400">
 
----
+--
 <i>2. Data Cleaning</i> <br>
 All cleaning steps were performed using SQL. The full script is available in the project files.
 **Steps included:**
