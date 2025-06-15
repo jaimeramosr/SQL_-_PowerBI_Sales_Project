@@ -6,16 +6,17 @@
     <p align="center">
   <img src="Images/Sales_Dashboard.png" alt="Sales Dashboard" width="700">
 </p>
+---
 <h2>🛠️ Data preparation with SQL</h2>
 	<i>1. Importing data </i> <br>
-	- The original dataset was reviewed in Excel to understand its structure, identify irrelevant columns, and check for data types.
-	- The data was then imported into **MySQL**, ensuring the correct formats were applied—especially for dates (e.g., `%m/%d/%Y`).
-
-  <img src="Images/Import_window.png" alt="SQL Import Window" width="600">
+	The original dataset was reviewed in Excel to understand its structure, identify irrelevant columns, and check for data types.
+	<p>
+	The data was then imported into **MySQL**, ensuring the correct formats were applied—especially for dates (e.g., `%m/%d/%Y`).
+	</p>
+  <img src="Images/Import_window.png" alt="SQL Import Window" width="400">
 
 ---
-	
-	<i>2. Data cleaning </i> <br>
+	*2. Data cleaning*
 	All cleaning steps were performed using SQL. The full script is available in the project files.
 	**Steps included:**
 	1. **Removing duplicates**
@@ -55,7 +56,7 @@ UPDATE sales_data2 SET Profit = Total_Revenue - (Cost_Price * Quantity_Purchased
 	<blockquote>
         <img src="Imágenes/SQL_Analysis_Results.PNG" alt="">
     </blockquote>
-
+---
 <h2>Power BI Dashboard Development</h2>
 	<i>1. Importing Cleaned Data </i> <br>
 	Cleaned data was imported into Power BI as .csv or directly from the MySQL database. 
