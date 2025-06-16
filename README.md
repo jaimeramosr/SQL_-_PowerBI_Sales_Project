@@ -96,6 +96,7 @@ Visuals include:
 <img src="Images/Sales_Dashboard.png" alt="Sales Dashboard" width="700">
 </p>
 
+---
 <h2>✅ Key Insights from the Sales Dashboard</h2>
 
 - December stands out as the month with highest revenue (~0.52M) — likely influenced by seasonal/holiday shopping patterns.
