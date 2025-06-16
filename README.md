@@ -2,7 +2,7 @@
 
 <h1>📊 Executive Sales Dashboard with SQL & Power BI </h1>
 <p>
-	This project focuses on preparing, cleaning, and analyzing sales data using SQL and building a real-time, executive-oriented dashboard using Microsoft Power BI.
+	This project focuses on preparing, cleaning, and analyzing sales data using SQL and building a real-time, executive-oriented dashboard using Microsoft Power BI. Key business insights are also highlighted.
     <p align="center">
   <img src="Images/Sales_Dashboard.png" alt="Sales Dashboard" width="700">
 </p>
