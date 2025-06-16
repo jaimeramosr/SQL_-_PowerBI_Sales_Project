@@ -96,12 +96,14 @@ Visuals include:
 <img src="Images/Sales_Dashboard.png" alt="Sales Dashboard" width="700">
 </p>
 
-<i>💡 4. Insights  Findings </i> <br>
-Some key observations:
+<h2>✅ Key Insights from the Sales Dashboard</h2>
 
-- December shows the highest revenue—likely due to holiday shopping.
-- Tuesdays and Fridays have the lowest sales—could inform operational decisions like store maintenance or training days.
-- There is a linear relationship between profit and discounts, which could be further explored using Python or advanced analytics tools.
-- Payment methods are evenly distributed.
+- December stands out as the month with highest revenue (~0.52M) — likely influenced by seasonal/holiday shopping patterns.
+- Tuesdays and Fridays underperform compared to other days — ideal for scheduling non-sales activities like inventory audits or staff training.
+- Discounts correlate with profit — suggesting discounts may be used strategically rather than harming margins.
+- Payment method usage is balanced — Cash, Credit Card, and Mobile Payments each contribute ~33%, indicating no dominant preference across users.
+- Top revenue categories are Home & Kitchen, Clothing, and Electronics — potential areas for promotion and cross-selling.
+- Geographic revenue differences are significant — London, Birmingham, New York and Montreal generate higher profits and/or discounts.
+- Nigeria, India, and China show cluster patterns with lower discounts but decent profits — possible candidates for margin optimization.
 
 Further insights can be uncovered using Power BI filters to segment by country, store, or product category.
