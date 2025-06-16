@@ -68,7 +68,7 @@ As seen in the script, The analysis focuses on 4 aspects:
 <img src="Images/SQL_Analysis_Results.png" alt="SQL Analysis Results" width="700">
 
 ---
-<h2>Power BI Dashboard Development</h2>
+<h2>📈 Power BI Dashboard Development</h2>
 <i>1. Importing Cleaned Data </i> <br>
 <p>
 Cleaned data was imported into Power BI as .csv or directly from the MySQL database. 
@@ -96,7 +96,7 @@ Visuals include:
 <img src="Images/Sales_Dashboard.png" alt="Sales Dashboard" width="700">
 </p>
 
-<i>4. Insights  Findings </i> <br>
+<i>💡 4. Insights  Findings </i> <br>
 Some key observations:
 
 - December shows the highest revenue—likely due to holiday shopping.
